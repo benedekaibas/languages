@@ -1,0 +1,34 @@
+Java: 77.8 ms
+Go: 31.5 ms
+Zig: 34.4 ms
+C: 17.0 ms
+Rust: 25.1 ms
+Dart: 82.6 ms
+Objective-C: 22.4 ms
+Kotlin JVM: 90.6 ms
+Node: 105.3 ms
+Node (jitless): 610.1 ms
+Bun: 47.5 ms
+Bun (Compiled): 60.4 ms
+Bun (jitless): 47.4 ms
+Deno (jitless): 604.7 ms
+Deno: 90.0 ms
+PyPy: 89.2 ms
+CPP: 19.9 ms
+Scala: 237.4 ms
+Scala-Native: 19.5 ms
+PHP JIT: 257.4 ms
+PHP: 719.9 ms
+Python: 799.1 ms
+Nim: 32.7 ms
+Crystal: 151.0 ms
+Odin: 26.1 ms
+Fortran: 15.3 ms
+LuaJIT: 76.8 ms
+Lua: 580.7 ms
+Swift: 39.8 ms
+Julia: 202.2 ms
+C#: 60.4 ms
+F#: 100.1 ms
+Ruby: 810.3 ms
+Ruby YJIT: 419.4 ms
