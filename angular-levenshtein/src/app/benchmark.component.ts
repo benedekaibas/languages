@@ -1,4 +1,16 @@
-function levenshteinDistance(str1, str2) {
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-benchmark',
+  standalone: true,
+  template: '<h1>Levenshtein Benchmark</h1>',
+})
+export class BenchmarkComponent implements OnInit {
+  ngOnInit() {
+    this.benchmark();
+  }
+
+  levenshteinDistance(str1: string, str2: string): number {
     if (typeof str1 !== 'string' || typeof str2 !== 'string') {
         throw new TypeError('Both arguments must be strings');
     }
@@ -37,16 +49,14 @@ function levenshteinDistance(str1, str2) {
     }
 
     return prevRow[m];
-}
+  }
 
-function benchmark() {
+  benchmark() {
     const str1 = "example";
     const str2 = "samples";
-    const start = process.hrtime();
-    const distance = levenshteinDistance(str1, str2);
-    const end = process.hrtime(start);
-    const timeInMs = (end[0] * 1000) + (end[1] / 1000000);
-    console.log(`Node.js: ${timeInMs} ms`);
+    const start = performance.now();
+    const distance = this.levenshteinDistance(str1, str2);
+    const end = performance.now();
+    console.log(`Angular: ${end - start} ms`);
+  }
 }
-
-benchmark();
