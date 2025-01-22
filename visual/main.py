@@ -33,12 +33,13 @@ class Visual():
         return prog_languages, lang_times
     
     def visualize_data(self):
+        """Visualize the data that comes from the Levenshtein benchmark."""
         prog_languages, lang_times = Visual.format_data(self)
         plt.figure(figsize=(12, 8))
         plt.barh(prog_languages, lang_times, color='skyblue')
         plt.xlabel('Execution Time (ms)')
         plt.title('Levenshtein Distance')
-        plt.gca().invert_yaxis()  # Reverse the order to have the fastest languages at the top
+        plt.gca().invert_yaxis()
         plt.tight_layout()
         plt.show()
 
